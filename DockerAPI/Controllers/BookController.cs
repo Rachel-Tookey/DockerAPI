@@ -13,8 +13,7 @@ namespace DockerAPI.Controllers
         {
             var json = System.IO.File.ReadAllText("./Controllers/books.json");
             var books = JsonSerializer.Deserialize<List<Book>>(json);
-            //return Ok(books); 
-            return NotFound(books);
+            return Ok(books); 
         }
         [HttpGet("{id}")]
         public IActionResult GetBooks(int id)
