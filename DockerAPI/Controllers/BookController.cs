@@ -16,7 +16,7 @@ namespace DockerAPI.Controllers
             return Ok(books); 
         }
         [HttpGet("{id}")]
-        public IActionResult GetBooks(int id)
+        public IActionResult GetBooksById(int id)
         {
             var json = System.IO.File.ReadAllText("./Controllers/books.json");
             var books = JsonSerializer.Deserialize<List<Book>>(json);
