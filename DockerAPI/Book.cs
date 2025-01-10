@@ -8,9 +8,9 @@ namespace DockerAPI
         public int Id { get; set; }
 
         [JsonPropertyName("title")]
-        public string Title { get; set; }
+        public string Title { get; set; } = "";
 
         [JsonPropertyName("author")]
-        public string Author { get; set; }
+        public string Author { get; set; } = "";
     }
 }
